@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --white-color: hsl(0, 0%, 100%);
+  --light-pink-color: hsl(275, 100%, 97%);
+  --gratish-purple-color: hsl(292, 16%, 49%);
+  --dark-purple-color: hsl(292, 42%, 14%);
+  --pink-color: hsl(281, 83%, 54%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+body {
+  background-color: var(--light-pink-color);
+  background-image: url(./assets/images/background-pattern-desktop.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+main {
+  height: 100vh;
+}
+
+.bg {
+  object-fit: cover;
+}
+
+.container {
+  width: 600px;
+}
+
+.header h1 {
+  color: var(--dark-purple-color);
+  font-size: 3.5rem;
+}
+
+.header img {
+  width: 40px;
+  height: 40px;
+}
+
+.accordion-body {
+  color: var(--gratish-purple-color);
+}
+
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='31' fill='none' viewBox='0 0 30 31'%3E%3Cpath fill='%23AD28EB' d='M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.203 12.203 0 0 0 15 3.312Zm4.688 13.124h-3.75v3.75a.938.938 0 0 1-1.876 0v-3.75h-3.75a.938.938 0 0 1 0-1.875h3.75v-3.75a.938.938 0 0 1 1.876 0v3.75h3.75a.938.938 0 0 1 0 1.876Z'/%3E%3C/svg%3E");
+  transition: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='31' fill='none' viewBox='0 0 30 31'%3E%3Cpath fill='%23301534' d='M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a.938.938 0 0 1 0-1.875h9.374a.938.938 0 0 1 0 1.876Z'/%3E%3C/svg%3E");
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+p {
+  color: var(--dark-purple-color);
+  margin-bottom: auto;
+}
+
+.accordion-button:hover {
+  color: var(--pink-color);
+}
+
+@media (max-width: 576px) {
+  body {
+    background-image: url(./assets/images/background-pattern-mobile.svg);
+    background-position: top;
+    background-size: 100% auto;
+  }
+  .container {
+    margin: 0 2rem;
+  }
+}
